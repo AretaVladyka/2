@@ -1,0 +1,63 @@
+class Human:
+  def __init__(self, name, maxAge,):
+    self.name = name
+    self.maxAge = maxAge
+    self.currentAge = 0
+    self.tired = True
+
+ 
+
+  def about(self):
+    print("Ім'я людини : " + self.name)
+    print("Життя людини складає: " + str(self.maxAge))
+    print('Вік людини: ' + str(self.currentAge))
+
+ 
+
+  def happyBirthDay(self):
+    print('У людини день народження')
+    self.currentAge = self.currentAge + 1
+
+ 
+  def workin(self):
+    print('Людина багато працює')
+    self.tired = True
+  
+  def work(self):
+    if self.tired:
+      print('Людина змучилась...')
+      self.tired = False
+    else:
+      print('Не давайте їй більше роботи, вона змучена...')
+
+ 
+
+  def relax(self):
+    if self.tired:
+      print('Людина відпочиває')
+    else:
+      print('Не хвилюйте її, вона відпочиває...')
+      self.tired = True
+
+ 
+
+  def sleep(self):
+    print('Людина лягає спати')
+    self.tired = True
+
+ 
+
+  def get_up(self):
+    print('Людина прокинулась')
+  
+    
+man_human = Human('Ман', 100)
+
+man_human.get_up()
+man_human.workin()
+
+man_human.work()
+man_human.relax()
+man_human.work()
+man_human.sleep()
+
